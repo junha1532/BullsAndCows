@@ -68,7 +68,7 @@ public class BullsAndCowsServiceLayerImpl implements BullsAndCowsServiceLayer {
        List<Game> tempList = new ArrayList<Game>(); 
        dao.ListAllGames().stream()
                .forEach(game -> { 
-               if(game.isGameOver() == false) {game.setAnswer(""); tempList.add(game);}    });
+               if(game.isGameOver() == false) {game.setAnswer("");} tempList.add(game); });
        
        return tempList;
     }

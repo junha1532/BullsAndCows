@@ -42,7 +42,7 @@ public class Game {
         return gameOver;
     }
 
-    public void setGameOver(boolean status) {
+    public void setGameOver(boolean gameOver) {
         this.gameOver = gameOver;
     }
 

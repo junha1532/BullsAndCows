@@ -62,7 +62,7 @@ public class BullsAndCowsDaoImpl implements BullsAndCowsDao {
         Game currGame = games.get(gameId);
         currGame.setGameOver(true);
         
-        games.put(currGame.getGameId(), currGame);
+        games.replace(gameId, currGame);
         
         return currGame;
     }

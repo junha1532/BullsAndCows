@@ -53,7 +53,7 @@ public class BullsAndCowsController {
     } 
 
     @GetMapping("/rounds/{gameId}")
-    public List<Round> allRounds(@PathVariable int gameId) {
+        public List<Round> allRounds(@PathVariable int gameId) {
         return serviceLayer.getRounds(gameId);
     }
     

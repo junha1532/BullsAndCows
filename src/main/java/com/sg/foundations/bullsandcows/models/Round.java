@@ -5,7 +5,7 @@
  */
 package com.sg.foundations.bullsandcows.models;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 /**
@@ -13,13 +13,13 @@ import java.util.Objects;
  * @author junha
  */
 public class Round {
-    LocalDate time;
+    LocalDateTime time;
     private int gameId;
     private String guess;
     private String result;
 
     public Round(int gameId, String guess) {
-        this.time = LocalDate.now();
+        this.time = LocalDateTime.now();
         this.gameId = gameId;
         this.guess = guess;
     }
@@ -32,11 +32,11 @@ public class Round {
         this.result = result;
     }
 
-    public LocalDate getTime() {
+    public LocalDateTime getTime() {
         return time;
     }
 
-    public void setTime(LocalDate time) {
+    public void setTime(LocalDateTime time) {
         this.time = time;
     }
 
@@ -59,10 +59,10 @@ public class Round {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 59 * hash + Objects.hashCode(this.time);
-        hash = 59 * hash + this.gameId;
-        hash = 59 * hash + Objects.hashCode(this.guess);
-        hash = 59 * hash + Objects.hashCode(this.result);
+        hash = 97 * hash + Objects.hashCode(this.time);
+        hash = 97 * hash + this.gameId;
+        hash = 97 * hash + Objects.hashCode(this.guess);
+        hash = 97 * hash + Objects.hashCode(this.result);
         return hash;
     }
 
@@ -97,7 +97,8 @@ public class Round {
     public String toString() {
         return "Round{" + "time=" + time + ", gameId=" + gameId + ", guess=" + guess + ", result=" + result + '}';
     }
-   
+
+    
     
             
 }
